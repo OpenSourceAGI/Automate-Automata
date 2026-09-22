@@ -1,0 +1,7 @@
+name = "automata-game-of-life"
+compatibility_date = "2024-09-01"
+
+# The SvelteKit static build, served straight from Cloudflare's edge.
+[assets]
+directory = "./build"
+not_found_handling = "single-page-application"

@@ -1,0 +1,55 @@
+{
+  "name": "complexity-automata",
+  "version": "1.0.0",
+  "description": "Cellular automata engine — Conway's Game of Life and all 262,144 other rules, with colour inheritance, saveable universes, patterns and demos. Runs in the browser, on mobile and in the terminal.",
+  "keywords": [
+    "cellular-automata",
+    "game-of-life",
+    "conway",
+    "life",
+    "wolfram",
+    "fractal",
+    "simulation",
+    "generative"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenSourceAGI/Automate-Automata.git",
+    "directory": "packages/complexity-automata"
+  },
+  "homepage": "https://github.com/OpenSourceAGI/Automate-Automata/tree/master/packages/complexity-automata#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "test": "bun test",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.10",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

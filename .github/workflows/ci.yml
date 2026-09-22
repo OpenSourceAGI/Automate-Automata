@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.11
+
+      - run: bun install --frozen-lockfile
+
+      # The engine builds first: the CLI and the components import it from
+      # `dist`, so nothing else can be checked until it exists.
+      - run: bun run build:engine
+      - run: bun run typecheck
+      - run: bun run test
+      - run: bun run build:cli
+      - run: bun run build:web
+
+      # The Android app is the web build plus a Capacitor copy step. Assembling
+      # the APK needs the Android SDK; verifying the copy does not.
+      - run: bunx cap sync android
+        working-directory: apps/android

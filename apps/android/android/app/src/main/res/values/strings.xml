@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Complexity Automata</string>
+    <string name="title_activity_main">Complexity Automata</string>
+    <string name="package_name">com.vtempest.automata</string>
+    <string name="custom_url_scheme">com.vtempest.automata</string>
+</resources>

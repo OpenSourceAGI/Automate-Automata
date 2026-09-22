@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#080a10" />
+    <!-- The page renders on the client, so the title and description live here
+         rather than in a <svelte:head> that prerendering would never run. -->
+    <title>Complexity Automata — Conway's Game of Life</title>
+    <meta
+      name="description"
+      content="Conway's Game of Life and 262,143 other cellular automata universes. Draw gliders, grow fractals, save universes and share them — on the web, on Android and in your terminal."
+    />
+    <meta property="og:title" content="Complexity Automata" />
+    <meta property="og:description" content="Conway's Game of Life and 262,143 other universes, in your browser." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="%sveltekit.assets%/logo.png" />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="tap">
+    <div>%sveltekit.body%</div>
+  </body>
+</html>
