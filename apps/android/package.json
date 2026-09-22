@@ -1,0 +1,22 @@
+{
+  "name": "@automate-automata/android",
+  "private": true,
+  "version": "3.0.0",
+  "description": "Capacitor wrapper that ships the web app as the Android app.",
+  "type": "module",
+  "scripts": {
+    "build": "bun run sync && bun run assemble",
+    "sync": "cd ../web && bun run build && cd ../android && cap sync android",
+    "assemble": "cd android && ./gradlew assembleDebug",
+    "release": "cd android && ./gradlew bundleRelease",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.1",
+    "@capacitor/core": "^6.1.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.1",
+    "typescript": "^5.5.4"
+  }
+}

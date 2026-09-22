@@ -1,0 +1,54 @@
+{
+  "name": "complexity-automata-cli",
+  "version": "1.0.0",
+  "description": "Cellular automata animation in your terminal — Conway's Game of Life, fractal replicators and 262,144 other rules, in truecolor half-blocks.",
+  "keywords": [
+    "cli",
+    "terminal",
+    "animation",
+    "cellular-automata",
+    "game-of-life",
+    "conway",
+    "ansi",
+    "screensaver"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenSourceAGI/Automate-Automata.git",
+    "directory": "packages/complexity-automata-cli"
+  },
+  "homepage": "https://github.com/OpenSourceAGI/Automate-Automata/tree/master/packages/complexity-automata-cli#readme",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "types": "./dist/cli.d.ts",
+  "bin": {
+    "automata": "./dist/cli.js",
+    "complexity-automata": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "start": "bun run src/cli.ts",
+    "test": "bun test",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "dependencies": {
+    "complexity-automata": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.10",
+    "@types/node": "^22.5.0",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
