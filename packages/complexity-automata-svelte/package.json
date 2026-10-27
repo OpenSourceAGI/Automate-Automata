@@ -1,0 +1,47 @@
+{
+  "name": "complexity-automata-svelte",
+  "version": "1.0.0",
+  "description": "Svelte components for complexity-automata — a canvas cellular automata view, rule controls, demo picker and a saved-universe library.",
+  "keywords": [
+    "svelte",
+    "cellular-automata",
+    "game-of-life",
+    "canvas",
+    "component"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenSourceAGI/Automate-Automata.git",
+    "directory": "packages/complexity-automata-svelte"
+  },
+  "type": "module",
+  "svelte": "./src/index.js",
+  "main": "./src/index.js",
+  "exports": {
+    ".": {
+      "svelte": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "bun test"
+  },
+  "dependencies": {
+    "complexity-automata": "workspace:*"
+  },
+  "peerDependencies": {
+    "svelte": "^4.0.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "svelte": "^4.2.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
